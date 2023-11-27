@@ -1,15 +1,8 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import SearchModal from "../../components/Modal/SearchModal";
 import "./styles.scss";
 
 export default function Homepage() {
-  const [modalShow, setModalShow] = useState(false);
-
-  const handleOpenModal = () => {
-    setModalShow(true);
-  };
-
   return (
     <div className="home-container">
       <div className="home-content">
@@ -22,12 +15,11 @@ export default function Homepage() {
             Devs? That really robust project that he usually posts on his
             profile? You can find it here!
           </p>
-          <a href="#" className="home-search-btn" onClick={handleOpenModal}>
+          <Link to="/search" className="home-search-btn">
             Search for user
-          </a>
+          </Link>
         </div>
       </div>
-      <SearchModal show={modalShow} onHide={() => setModalShow(false)} />
     </div>
   );
 }

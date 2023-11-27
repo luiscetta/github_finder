@@ -1,0 +1,21 @@
+.search-container {
+    .search-content {
+        .search-btn {
+            font-size: 1.2rem;
+            color: var(--white-100);
+            font-weight: bold;
+            text-transform: uppercase;
+
+            padding: 0.8rem;
+            background-color: var(--purple-100);
+            border: none;
+            border-radius: 0.3rem;
+        }
+
+        .search-btn:hover {
+            cursor: pointer;
+            background-color: #6c48b4;
+            transition: all 0.5s;
+        }
+    }
+}
