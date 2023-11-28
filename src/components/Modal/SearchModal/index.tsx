@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, KeyboardEvent } from "react";
 import { Modal, Spinner } from "react-bootstrap";
 import Lottie from "lottie-react";
 
@@ -27,6 +27,12 @@ const SearchModal = ({
     setUserName("");
   };
 
+  const handleKeydown = (e: KeyboardEvent) => {
+    if (e.key === "Enter") {
+      loadUser(userName);
+    }
+  };
+
   return (
     <>
       <Modal
@@ -51,6 +57,7 @@ const SearchModal = ({
                 value={userName}
                 placeholder="Enter the user name"
                 onChange={(e) => setUserName(e.target.value)}
+                onKeyDown={handleKeydown}
                 autoFocus={true}
               />
               {hasError && (

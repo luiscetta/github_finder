@@ -16,13 +16,45 @@
     .back-btn:hover {
         background-color: #11131665;
         border-radius: 5rem;
-        transition: .2s ease;
+        transition: 0.2s ease;
     }
 
-    .result {
-        color: white;
+    // NON-EMPTY SEARCH
+    .search-result-container {
+        .search-btn {
+            font-size: 1rem;
+            color: var(--black-800);
+            font-weight: bold;
+            text-transform: uppercase;
+
+            padding: 0.8rem;
+            background-color: var(--green-100);
+            border: none;
+            border-radius: 0.3rem;
+            position: absolute;
+            right: 1%;
+        }
+
+        .search-btn:hover {
+            cursor: pointer;
+            background-color: #2dad52;
+            transition: all 0.5s;
+        }
+
+        .search-result-content {
+            display: grid;
+
+            .avatar {
+                width: 10rem;
+            }
+
+            .login {
+                color: var(--grey-200);
+            }
+        }
     }
 
+    // EMPTY SEARCH
     .search-content {
         margin: auto;
         display: grid;
