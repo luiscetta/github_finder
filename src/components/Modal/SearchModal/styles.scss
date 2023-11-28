@@ -1,6 +1,6 @@
 .modal {
-    background-color: #0d111779;
-    backdrop-filter: blur(4.4px);
+    background-color: #121b2756;
+    backdrop-filter: blur(3px);
 
     .modal-content {
         background-color: var(--black-800);
@@ -58,6 +58,15 @@
                         outline: 3px solid var(--purple-100);
                     }
 
+                    .search-input.error {
+                        outline: 2px solid var(--error);
+                    }
+
+                    .error-span {
+                        color: var(--error);
+                        margin-top: 0.7rem;
+                    }
+
                     .search-btn {
                         display: flex;
                         align-items: center;
@@ -74,8 +83,8 @@
                         text-transform: uppercase;
 
                         .search-icon {
-                            margin-left: .35rem;
-                            font-size: .75rem;
+                            margin-left: 0.35rem;
+                            font-size: 0.75rem;
                             text-align: center;
                         }
                     }

@@ -3,7 +3,6 @@ import { Modal } from "react-bootstrap";
 import Lottie from "lottie-react";
 import { BsSearch } from "react-icons/bs";
 
-import { UserProps } from "../../../types/user";
 import animationData from "../../assets/json/cat1.json";
 import "./styles.scss";
 
@@ -11,40 +10,16 @@ type SearchModalProps = {
   show: boolean;
   onHide: () => void;
   loadUser: (userName: string) => Promise<void>;
+  hasError: boolean;
 };
 
-const SearchModal = ({ show, onHide, loadUser }: SearchModalProps) => {
-  const [user, setUser] = useState<UserProps | null>(null);
-  const [inputName, setInputName] = useState("");
-
-  const loadUserName = async (userName: string) => {
-    const res = await fetch(`https://api.github.com/users/${userName}`);
-    const data = await res.json();
-
-    const {
-      avatar_url,
-      login,
-      location,
-      followers,
-      following,
-      name,
-      bio,
-      blog,
-    } = data;
-
-    const userData: UserProps = {
-      avatar_url,
-      login,
-      location,
-      followers,
-      following,
-      name,
-      bio,
-      blog,
-    };
-
-    setUser(userData);
-  };
+const SearchModal = ({
+  show,
+  onHide,
+  loadUser,
+  hasError,
+}: SearchModalProps) => {
+  const [userName, setUsername] = useState("");
 
   return (
     <>
@@ -65,15 +40,16 @@ const SearchModal = ({ show, onHide, loadUser }: SearchModalProps) => {
             </h4>
             <div className="search-input-field">
               <input
-                className="search-input"
+                className={`search-input ${hasError ? "error" : ""}`}
                 type="text"
-                placeholder="Enter the user name."
-                onChange={(e) => setInputName(e.target.value)}
+                placeholder="Enter the user name"
+                onChange={(e) => setUsername(e.target.value)}
+                autoFocus={true}
               />
-              <button
-                className="search-btn"
-                onClick={() => loadUserName(inputName)}
-              >
+              {hasError && (
+                <span className="error-span">Enter a valid username!</span>
+              )}
+              <button className="search-btn" onClick={() => loadUser(userName)}>
                 Search
                 <BsSearch className="search-icon" />
               </button>

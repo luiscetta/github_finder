@@ -13,6 +13,12 @@
         }
     }
 
+    .back-btn:hover {
+        background-color: #11131665;
+        border-radius: 5rem;
+        transition: .2s ease;
+    }
+
     .search-content {
         margin: auto;
         display: grid;
@@ -21,25 +27,27 @@
         .search-title {
             color: var(--grey-200);
             font-size: 1.5rem;
+            text-align: center;
+            line-height: 2.3rem;
 
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
         }
 
         .search-btn {
             font-size: 1rem;
-            color: var(--white-100);
+            color: var(--black-800);
             font-weight: bold;
             text-transform: uppercase;
 
             padding: 0.8rem;
-            background-color: var(--purple-100);
+            background-color: var(--green-100);
             border: none;
             border-radius: 0.3rem;
         }
 
         .search-btn:hover {
             cursor: pointer;
-            background-color: #6c48b4;
+            background-color: #2dad52;
             transition: all 0.5s;
         }
     }
