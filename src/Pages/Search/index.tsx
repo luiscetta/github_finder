@@ -13,6 +13,7 @@ export default function Search() {
   const [modalShow, setModalShow] = useState(false);
   const [user, setUser] = useState<UserProps | null>(null);
   const [hasError, setHasError] = useState(false);
+  const [searching, setSearching] = useState(false);
 
   const handleOpenModal = () => {
     setModalShow(true);
@@ -23,8 +24,11 @@ export default function Search() {
       const res = await axios.get(`https://api.github.com/users/${userName}`);
       const data = res.data as UserProps;
 
+      setSearching(true);
       setUser(data);
       setModalShow(false);
+      setSearching(false);
+      setHasError(false);
     } catch (err) {
       console.error(err);
       setHasError(true);
@@ -43,7 +47,12 @@ export default function Search() {
         />
       </Link>
       {user ? (
-        <p>{user.login}</p>
+        <>
+          <p className="result">{user.login}</p>
+          <a className="search-btn" onClick={handleOpenModal}>
+            Click here to search
+          </a>
+        </>
       ) : (
         <>
           <div className="search-content">
@@ -63,6 +72,7 @@ export default function Search() {
         show={modalShow}
         onHide={() => setModalShow(false)}
         hasError={hasError}
+        searching={searching}
       />
     </div>
   );

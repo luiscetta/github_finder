@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Modal } from "react-bootstrap";
+import { Modal, Spinner } from "react-bootstrap";
 import Lottie from "lottie-react";
-import { BsSearch } from "react-icons/bs";
 
 import animationData from "../../assets/json/cat1.json";
 import "./styles.scss";
@@ -11,6 +10,7 @@ type SearchModalProps = {
   onHide: () => void;
   loadUser: (userName: string) => Promise<void>;
   hasError: boolean;
+  searching: boolean;
 };
 
 const SearchModal = ({
@@ -18,8 +18,14 @@ const SearchModal = ({
   onHide,
   loadUser,
   hasError,
+  searching,
 }: SearchModalProps) => {
-  const [userName, setUsername] = useState("");
+  const [userName, setUserName] = useState("");
+
+  const handleSubmit = async () => {
+    await loadUser(userName);
+    setUserName("");
+  };
 
   return (
     <>
@@ -42,16 +48,30 @@ const SearchModal = ({
               <input
                 className={`search-input ${hasError ? "error" : ""}`}
                 type="text"
+                value={userName}
                 placeholder="Enter the user name"
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setUserName(e.target.value)}
                 autoFocus={true}
               />
               {hasError && (
                 <span className="error-span">Enter a valid username!</span>
               )}
-              <button className="search-btn" onClick={() => loadUser(userName)}>
-                Search
-                <BsSearch className="search-icon" />
+              <button
+                className="search-btn"
+                onClick={handleSubmit}
+                disabled={searching}
+              >
+                {searching ? (
+                  <Spinner
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
+                  />
+                ) : (
+                  "Search"
+                )}
               </button>
             </div>
           </div>
