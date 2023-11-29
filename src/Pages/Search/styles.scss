@@ -6,10 +6,10 @@
 
     .back-btn {
         position: absolute;
-        margin: 1rem 0 0 1rem;
+        margin: 1.3rem 0 0 1.3rem;
 
         .back-btn-animation {
-            width: 4em;
+            width: 3em;
         }
     }
 
@@ -21,6 +21,8 @@
 
     // NON-EMPTY SEARCH
     .search-result-container {
+        width: 65vw;
+
         .search-btn {
             font-size: 1rem;
             color: var(--black-800);
@@ -39,18 +41,6 @@
             cursor: pointer;
             background-color: #2dad52;
             transition: all 0.5s;
-        }
-
-        .search-result-content {
-            display: grid;
-
-            .avatar {
-                width: 10rem;
-            }
-
-            .login {
-                color: var(--grey-200);
-            }
         }
     }
 

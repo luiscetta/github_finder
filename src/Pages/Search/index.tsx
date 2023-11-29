@@ -8,6 +8,7 @@ import animationData from "../../components/assets/json/backBtn.json";
 import GenericButton from "../../components/Buttons/GenericButton";
 import { UserProps } from "../../types/user";
 import { ErrorToast } from "../../utils/toaster";
+import User from "../../components/User";
 import "./styles.scss";
 
 export default function Search() {
@@ -49,31 +50,26 @@ export default function Search() {
       </Link>
       {user ? (
         <div className="search-result-container">
-          <GenericButton
+          {/* <GenericButton
             onClick={handleOpenModal}
             className="search-btn"
             content="Search again"
-          />
-          <div className="search-result-content">
-            <img className="avatar" src={user.avatar_url} alt="avatar github" />
-            <p className="login">{user.login}</p>
-          </div>
+          /> */}
+          <User {...user} />
         </div>
       ) : (
-        <>
-          <div className="search-content">
-            <h2 className="search-title">
-              Do you already know which user you're going to search for?
-              <br />
-              If so, just click the button below!
-            </h2>
-            <GenericButton
-              onClick={handleOpenModal}
-              className="search-btn"
-              content="Click here to search"
-            />
-          </div>
-        </>
+        <div className="search-content">
+          <h2 className="search-title">
+            Do you already know which user you're going to search for?
+            <br />
+            If so, just click the button below!
+          </h2>
+          <GenericButton
+            onClick={handleOpenModal}
+            className="search-btn"
+            content="Click here to search"
+          />
+        </div>
       )}
       <SearchModal
         loadUser={loadUser}
