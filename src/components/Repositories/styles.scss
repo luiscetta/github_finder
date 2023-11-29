@@ -1,0 +1,11 @@
+.repos-container {
+    .repos-content {
+        height: 48rem;
+        border: 1px solid var(--grey-600);
+        border-radius: 0.5rem;
+
+        .p {
+            color: white;
+        }
+    }
+}

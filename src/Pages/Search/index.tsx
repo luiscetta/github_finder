@@ -1,19 +1,22 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
-import axios from "axios";
 
 import SearchModal from "../../components/Modal/SearchModal";
 import animationData from "../../components/assets/json/backBtn.json";
 import GenericButton from "../../components/Buttons/GenericButton";
-import { UserProps } from "../../types/user";
+import { GithubUser, GithubRepo } from "../../types/user";
 import { ErrorToast } from "../../utils/toaster";
 import User from "../../components/User";
+import Repositorys from "../../components/Repositories";
+import GetUser from "../../services/Users";
+import GetRepos from "../../services/Repos";
 import "./styles.scss";
 
 export default function Search() {
   const [modalShow, setModalShow] = useState(false);
-  const [user, setUser] = useState<UserProps | null>(null);
+  const [user, setUser] = useState<GithubUser | null>(null);
+  const [repos, setRepos] = useState<GithubRepo[]>([]);
   const [hasError, setHasError] = useState(false);
   const [searching, setSearching] = useState(false);
 
@@ -23,17 +26,20 @@ export default function Search() {
 
   const loadUser = async (userName: string) => {
     try {
-      const res = await axios.get(`https://api.github.com/users/${userName}`);
-      const data = res.data as UserProps;
-
       setSearching(true);
-      setUser(data);
+
+      const user = await GetUser(userName);
+      const repos = await GetRepos(userName);
+
+      setUser(user);
+      setRepos(repos);
       setModalShow(false);
       setSearching(false);
       setHasError(false);
     } catch (err) {
       console.error(err);
       setHasError(true);
+      setSearching(false);
       ErrorToast();
     }
   };
@@ -49,14 +55,21 @@ export default function Search() {
         />
       </Link>
       {user ? (
-        <div className="search-result-container">
-          {/* <GenericButton
-            onClick={handleOpenModal}
-            className="search-btn"
-            content="Search again"
-          /> */}
-          <User {...user} />
-        </div>
+        <>
+          <div className="search-result-container">
+            <div className="search-result-layout">
+              <User data={user} />
+              <Repositorys data={repos} />
+            </div>
+            <div className="search-btn-content">
+              <GenericButton
+                onClick={handleOpenModal}
+                className="search-btn"
+                content="Search again"
+              />
+            </div>
+          </div>
+        </>
       ) : (
         <div className="search-content">
           <h2 className="search-title">
@@ -71,6 +84,7 @@ export default function Search() {
           />
         </div>
       )}
+
       <SearchModal
         loadUser={loadUser}
         show={modalShow}

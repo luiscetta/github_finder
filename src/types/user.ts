@@ -1,4 +1,4 @@
-export type UserProps = {
+export type GithubUser = {
   avatar_url: string;
   name: string;
   login: string;
@@ -10,5 +10,15 @@ export type UserProps = {
   followers: number;
   following: number;
   html_url: string;
-  repos_url: string;
+};
+
+export type GithubRepo = {
+  id: number;
+  name: string;
+  html_url: string;
+  visibility: string;
+  descriptions: string;
+  languages: string;
+  stargazers_count: number;
+  forks_count: number;
 };
