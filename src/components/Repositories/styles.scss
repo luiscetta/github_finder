@@ -18,11 +18,27 @@
             color: var(--grey-400);
 
             .repo-card-title {
+                display: flex;
+                align-items: center;
+
                 .repo-name {
-                    top: 0;
+                    width: auto;
+
                     color: var(--anchor);
                     font-weight: bold;
                     font-size: 0.975rem;
+                }
+
+                .repo-visibility {
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.75rem;
+                    text-transform: capitalize;
+
+                    margin-left: 0.7rem;
+                    border: 1px solid var(--grey-600);
+                    border-radius: 0.6rem;
+                    padding: 0 0.4rem;
                 }
             }
 
@@ -35,14 +51,43 @@
                 }
             }
 
-            .repo-language {
+            .repo-footer {
                 display: flex;
                 align-items: center;
 
                 font-size: 0.75rem;
 
-                .lng {
-                    font-size: 0.8rem;
+                .lng-content {
+                    display: inherit;
+                    align-items: inherit;
+                    margin-right: 1.2rem;
+
+                    .lng {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .star-content {
+                    display: inherit;
+                    align-items: inherit;
+                    margin-right: 1.2rem;
+
+                    .star-icon {
+                        margin-right: 0.28rem;
+
+                        font-size: 0.95rem;
+                    }
+                }
+
+                .fork-content {
+                    display: inherit;
+                    align-items: inherit;
+
+                    .fork-icon {
+                        margin-right: 0.28rem;
+
+                        font-size: 0.86rem;
+                    }
                 }
             }
         }
