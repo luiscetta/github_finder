@@ -1,11 +1,50 @@
 .repos-container {
-    .repos-content {
-        height: 48rem;
-        border: 1px solid var(--grey-600);
-        border-radius: 0.5rem;
+    height: 48rem;
 
-        .p {
-            color: white;
+    .repos-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 1rem 1.5rem;
+
+        .repo-card {
+            display: flex;
+            flex-direction: column;
+            height: 7.5rem;
+            border: 1px solid var(--grey-600);
+            border-radius: 0.4rem;
+            padding: 0.7rem;
+
+            color: var(--grey-400);
+
+            .repo-card-title {
+                .repo-name {
+                    top: 0;
+                    color: var(--anchor);
+                    font-weight: bold;
+                    font-size: 0.975rem;
+                }
+            }
+
+            .repo-description {
+                display: flex;
+                align-items: center;
+
+                .description {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .repo-language {
+                display: flex;
+                align-items: center;
+
+                font-size: 0.75rem;
+
+                .lng {
+                    font-size: 0.8rem;
+                }
+            }
         }
     }
 }

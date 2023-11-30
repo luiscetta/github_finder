@@ -30,6 +30,7 @@ const SearchModal = ({
   const handleKeydown = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
       loadUser(userName);
+      setUserName("");
     }
   };
 

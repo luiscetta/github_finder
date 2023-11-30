@@ -55,7 +55,7 @@ const User = ({ data }: UserComponentProps) => {
           {data.blog && (
             <span className="blog-content">
               <FaLink className="blog-icon" />
-              <a className="blog" href={`https://${data.blog}`} target="_blank">
+              <a className="blog" href={data.blog} target="_blank">
                 {data.blog}
               </a>
             </span>

@@ -105,7 +105,7 @@
             .blog-content {
                 .blog:hover {
                     text-decoration: underline;
-                    color: #4685d6;
+                    color: var(--anchor);
                 }
             }
 
@@ -116,7 +116,7 @@
 
                 .twitter:hover {
                     text-decoration: underline;
-                    color: #4685d6;
+                    color: var(--anchor);
                 }
             }
 

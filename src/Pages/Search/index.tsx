@@ -33,8 +33,8 @@ export default function Search() {
 
       setUser(user);
       setRepos(repos);
-      setModalShow(false);
       setSearching(false);
+      setModalShow(false);
       setHasError(false);
     } catch (err) {
       console.error(err);

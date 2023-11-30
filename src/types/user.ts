@@ -17,8 +17,8 @@ export type GithubRepo = {
   name: string;
   html_url: string;
   visibility: string;
-  descriptions: string;
-  languages: string;
+  description: string;
+  language: string;
   stargazers_count: number;
   forks_count: number;
 };
