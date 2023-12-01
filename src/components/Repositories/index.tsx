@@ -4,6 +4,7 @@ import { FaCodeFork as Fork } from "react-icons/fa6";
 import { GithubRepo } from "../../types/user";
 import DotLng from "../DotLng";
 import FormatNumber from "../../utils/formatNumber";
+import TruncateText from "../../utils/TruncateText";
 import "./styles.scss";
 
 type ReposComponentProps = {
@@ -27,13 +28,20 @@ const Repositories = ({ data }: ReposComponentProps) => {
                 </div>
                 <div className="repo-description">
                   {repo.description ? (
-                    <p className="description">{repo.description}</p>
+                    <TruncateText
+                      className="description"
+                      text={repo.description}
+                      maxLength={57}
+                    />
                   ) : (
                     <p className="description">Sem descrição.</p>
                   )}
                 </div>
                 <footer className="repo-footer">
-                  <div className="lng-content">
+                  <div
+                    className="lng-content"
+                    style={{ display: repo.language ? "flex" : "none" }}
+                  >
                     <DotLng language={repo.language} />
                     <span className="lng">{repo.language}</span>
                   </div>
