@@ -13,13 +13,19 @@
             height: 7.5rem;
             border: 1px solid var(--grey-600);
             border-radius: 0.4rem;
-            padding: 0.7rem;
+            padding: 0.9rem;
 
             color: var(--grey-400);
 
             .repo-card-title {
                 display: flex;
                 align-items: center;
+
+                .repo-icon {
+                    margin-right: 0.4rem;
+
+                    font-size: 1.1rem;
+                }
 
                 .repo-name {
                     width: auto;
@@ -29,13 +35,17 @@
                     font-size: 0.975rem;
                 }
 
+                .repo-name:hover {
+                    text-decoration: underline;
+                }
+
                 .repo-visibility {
                     display: flex;
                     align-items: center;
-                    font-size: 0.75rem;
+                    font-size: 0.7rem;
                     text-transform: capitalize;
 
-                    margin-left: 0.7rem;
+                    margin-left: 0.55rem;
                     border: 1px solid var(--grey-600);
                     border-radius: 0.6rem;
                     padding: 0 0.4rem;
@@ -43,8 +53,11 @@
             }
 
             .repo-description {
+                height: 100%;
                 display: flex;
                 align-items: center;
+
+                margin-top: 0.9rem;
 
                 .description {
                     font-size: 0.8rem;
@@ -54,12 +67,16 @@
             .repo-footer {
                 display: flex;
                 align-items: center;
+                margin-top: 0.9rem;
 
                 font-size: 0.75rem;
 
                 .lng-content {
                     display: inherit;
                     align-items: inherit;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
 
                     .lng {
                         font-size: 0.8rem;
