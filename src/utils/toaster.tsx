@@ -6,10 +6,18 @@ const defaultOptions = {
     fontWeight: "bold",
     fontSize: "1rem",
   },
-  position: toast.POSITION.TOP_CENTER,
+  position: toast.POSITION.TOP_RIGHT,
   closeOnClick: true,
 };
 
 export function ErrorToast() {
-  return toast.error("Error notification", { ...defaultOptions });
+  return toast.error("User not found. Try again! 😕", {
+    ...defaultOptions,
+  });
+}
+
+export function SuccessToast() {
+  return toast.success("You've found it! 😁", {
+    ...defaultOptions,
+  });
 }

@@ -15,6 +15,9 @@ type ReposComponentProps = {
 const Repositories = ({ data }: ReposComponentProps) => {
   return (
     <div className="repos-container">
+      <div className="repo-title-content">
+        <h5 className="repo-title">Repositories</h5>
+      </div>
       <div className="repos-content">
         <>
           {data

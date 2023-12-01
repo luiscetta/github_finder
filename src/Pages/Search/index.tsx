@@ -6,7 +6,7 @@ import SearchModal from "../../components/Modal/SearchModal";
 import animationData from "../../components/assets/json/backBtn.json";
 import GenericButton from "../../components/Buttons/GenericButton";
 import { GithubUser, GithubRepo } from "../../types/user";
-import { ErrorToast } from "../../utils/toaster";
+import { ErrorToast, SuccessToast } from "../../utils/toaster";
 import User from "../../components/User";
 import Repositorys from "../../components/Repositories";
 import GetUser from "../../services/Users";
@@ -35,6 +35,7 @@ export default function Search() {
       setRepos(repos);
       setSearching(false);
       setModalShow(false);
+      SuccessToast();
       setHasError(false);
     } catch (err) {
       console.error(err);
