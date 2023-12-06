@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 
 import SearchModal from "../../components/Modal/SearchModal";
+import magnifier from "../../components/assets/json/magnifier.json";
 import animationData from "../../components/assets/json/backBtn.json";
 import GenericButton from "../../components/Buttons/GenericButton";
 import { GithubUser, GithubRepo } from "../../types/user";
@@ -65,8 +66,15 @@ export default function Search() {
             <div className="search-btn-content">
               <GenericButton
                 onClick={handleOpenModal}
-                className="search-btn"
-                content="Search again"
+                className="magnifier-btn"
+                content={
+                  <Lottie
+                    style={{ width: "3rem" }}
+                    animationData={magnifier}
+                    autoplay={true}
+                    loop={true}
+                  />
+                }
               />
             </div>
           </div>

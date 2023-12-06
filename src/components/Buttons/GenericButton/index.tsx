@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 type GenericButtonProps = {
   onClick: () => void;
   className: string;
-  content: string;
+  content: ReactNode;
 };
 
 const GenericButton = ({ onClick, className, content }: GenericButtonProps) => {

@@ -7,7 +7,7 @@ export default function Layout() {
   return (
     <>
       <Router>
-        <ToastContainer theme="colored"/>
+        <ToastContainer theme="dark"/>
         <AppRoutes />
       </Router>
     </>
