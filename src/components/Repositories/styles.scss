@@ -117,7 +117,16 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
+    .repos-container {
+        .repos-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
     .repos-container {
         height: 100%;
 
@@ -132,7 +141,7 @@
 
         .repos-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 1.5rem;
             padding: 0 1.5rem 1rem;
 
