@@ -36,7 +36,7 @@ const Repositories = ({ data }: ReposComponentProps) => {
                     <TruncateText
                       className="description"
                       text={repo.description}
-                      maxLength={57}
+                      maxLength={55}
                     />
                   )}
                 </div>

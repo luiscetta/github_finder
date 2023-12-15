@@ -79,12 +79,12 @@
             background-color: var(--green-100);
             border: none;
             border-radius: 0.3rem;
+        }
 
-            .search-btn:hover {
-                cursor: pointer;
-                background-color: #2dad52;
-                transition: all 0.5s;
-            }
+        .search-btn:hover {
+            cursor: pointer;
+            background-color: #2dad52;
+            transition: all 0.5s;
         }
     }
 

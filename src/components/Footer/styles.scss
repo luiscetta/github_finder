@@ -1,0 +1,30 @@
+.footer-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        p {
+            color: var(--grey-500);
+            font-weight: bold;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            text-shadow: 2px 3px 5px #201f1f60;
+
+            a {
+                color: var(--grey-500);
+                margin-left: 0.4rem;
+            }
+
+            a:hover {
+                color: var(--green-100);
+            }
+        }
+    }
+}
