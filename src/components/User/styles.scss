@@ -157,3 +157,283 @@
         }
     }
 }
+
+// @media screen and (max-width: 834px) {
+//     .user-container {
+//         height: auto;
+//         display: grid;
+//         grid-template-columns: 1fr;
+
+//         .user-content {
+//             width: 100%;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: center;
+
+//             .avatar {
+//                 width: 10rem;
+//             }
+
+//             .text-content {
+//                 width: 100%;
+//                 text-align: center;
+
+//                 .login {
+//                     color: var(--grey-400);
+//                     font-size: 1.25rem;
+//                 }
+
+//                 .name {
+//                     font-size: 1.5rem;
+//                     font-weight: bold;
+
+//                     margin: 0;
+//                 }
+//             }
+
+//             .profile-btn-content {
+//                 width: 50%;
+//                 align-items: center;
+//                 justify-content: center;
+//                 display: flex;
+//                 margin: 0.5rem 0;
+
+//                 .profile-btn {
+//                     width: 100%;
+//                     padding: 0.3rem 0;
+//                     border-radius: 0.4rem;
+//                     border: 1px solid #494f55;
+
+//                     text-align: center;
+//                     font-size: 0.875rem;
+//                     background-color: var(--black-700);
+//                 }
+
+//                 .profile-btn:hover {
+//                     background-color: #48525e;
+//                     border: 1px solid var(--grey-400);
+//                 }
+//             }
+
+//             .bio {
+//                 text-align: center;
+//             }
+
+//             .follow-content {
+//                 width: 13.5rem;
+
+//                 text-align: left;
+//             }
+
+//             .address-content {
+//                 width: 100%;
+//                 text-align: left;
+
+//                 .company-content {
+//                     .company {
+//                         margin: 0;
+//                     }
+//                 }
+
+//                 .location-content {
+//                     .location {
+//                         font-size: 0.875rem;
+//                     }
+//                 }
+
+//                 .blog-content {
+//                     .blog:hover {
+//                         text-decoration: underline;
+//                         color: var(--anchor);
+//                     }
+//                 }
+
+//                 .twitter-content {
+//                     .twitter {
+//                         margin: 0;
+//                     }
+
+//                     .twitter:hover {
+//                         text-decoration: underline;
+//                         color: var(--anchor);
+//                     }
+//                 }
+
+//                 .company-content,
+//                 .location-content,
+//                 .twitter-content,
+//                 .blog-content {
+//                     display: flex;
+//                     align-items: center;
+//                     margin-bottom: 0.3rem;
+//                 }
+
+//                 .company-icon,
+//                 .location-icon,
+//                 .twitter-icon,
+//                 .blog-icon {
+//                     font-size: 1rem;
+//                     margin-right: 0.4rem;
+//                     color: var(--grey-400);
+//                 }
+//             }
+
+//             .avatar,
+//             .bio,
+//             .blog,
+//             .location,
+//             .name,
+//             .follow-number,
+//             .dot,
+//             .location-icon,
+//             .profile-btn,
+//             .company,
+//             .twitter,
+//             .company-icon,
+//             .twitter-icon,
+//             .blog-icon {
+//                 color: var(--grey-300);
+//             }
+//         }
+//     }
+// }
+
+@media screen and (max-width: 834px) {
+    .user-container {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .user-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .avatar {
+                width: 10rem;
+            }
+
+            .text-content {
+                width: 100%;
+                text-align: center;
+
+                .login {
+                    color: var(--grey-400);
+                    font-size: 1.25rem;
+                }
+
+                .name {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+
+                    margin: 0;
+                }
+            }
+
+            .profile-btn-content {
+                width: 50%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                margin: 0.5rem 0;
+
+                .profile-btn {
+                    width: 100%;
+                    padding: 0.3rem 0;
+                    border-radius: 0.4rem;
+                    border: 1px solid #494f55;
+
+                    text-align: center;
+                    font-size: 0.875rem;
+                    background-color: var(--black-700);
+                }
+
+                .profile-btn:hover {
+                    background-color: #48525e;
+                    border: 1px solid var(--grey-400);
+                }
+            }
+
+            .bio {
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .follow-content {
+                width: 13.5rem;
+
+                text-align: center;
+            }
+
+            .address-content {
+                .company-content {
+                    .company {
+                        margin: 0;
+                    }
+                }
+
+                .location-content {
+                    .location {
+                        font-size: 0.875rem;
+                    }
+                }
+
+                .blog-content {
+                    .blog:hover {
+                        text-decoration: underline;
+                        color: var(--anchor);
+                    }
+                }
+
+                .twitter-content {
+                    .twitter {
+                        margin: 0;
+                    }
+
+                    .twitter:hover {
+                        text-decoration: underline;
+                        color: var(--anchor);
+                    }
+                }
+
+                .company-content,
+                .location-content,
+                .twitter-content,
+                .blog-content {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0.3rem;
+                }
+
+                .company-icon,
+                .location-icon,
+                .twitter-icon,
+                .blog-icon {
+                    font-size: 1rem;
+                    margin-right: 0.4rem;
+                    color: var(--grey-400);
+                }
+            }
+
+            .avatar,
+            .bio,
+            .blog,
+            .location,
+            .name,
+            .follow-number,
+            .dot,
+            .location-icon,
+            .profile-btn,
+            .company,
+            .twitter,
+            .company-icon,
+            .twitter-icon,
+            .blog-icon {
+                color: var(--grey-300);
+            }
+        }
+    }
+}

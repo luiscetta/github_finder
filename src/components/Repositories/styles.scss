@@ -116,3 +116,121 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .repos-container {
+        height: 100%;
+
+        .repo-title-content {
+            padding: 0 1.5rem;
+
+            .repo-title {
+                color: var(--grey-300);
+                font-size: 1.1rem;
+            }
+        }
+
+        .repos-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            padding: 0 1.5rem 1rem;
+
+            .repo-card {
+                display: flex;
+                flex-direction: column;
+                height: 7.5rem;
+
+                color: var(--grey-400);
+
+                .repo-card-title {
+                    display: flex;
+                    align-items: center;
+
+                    .repo-icon {
+                        margin-right: 0.4rem;
+
+                        font-size: 1.1rem;
+                    }
+
+                    .repo-name {
+                        width: auto;
+
+                        color: var(--anchor);
+                        font-weight: bold;
+                        font-size: 0.875rem;
+                    }
+
+                    .repo-name:hover {
+                        text-decoration: underline;
+                    }
+
+                    .repo-visibility {
+                        display: flex;
+                        align-items: center;
+                        font-size: 0.7rem;
+                        text-transform: capitalize;
+
+                        margin-left: 0.55rem;
+                        border: 1px solid var(--grey-600);
+                        border-radius: 0.6rem;
+                        padding: 0 0.4rem;
+                    }
+                }
+
+                .repo-description {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    margin-top: 0.9rem;
+
+                    .description {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .repo-footer {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0.9rem;
+
+                    font-size: 0.75rem;
+
+                    .lng-content {
+                        display: inherit;
+                        align-items: inherit;
+
+                        .lng {
+                            font-size: 0.8rem;
+                            margin-right: 1.2rem;
+                        }
+                    }
+
+                    .star-content {
+                        display: inherit;
+                        align-items: inherit;
+                        margin-right: 1.2rem;
+
+                        .star-icon {
+                            margin-right: 0.28rem;
+
+                            font-size: 0.95rem;
+                        }
+                    }
+
+                    .fork-content {
+                        display: inherit;
+                        align-items: inherit;
+
+                        .fork-icon {
+                            margin-right: 0.28rem;
+
+                            font-size: 0.86rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
