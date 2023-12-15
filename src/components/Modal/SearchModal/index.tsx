@@ -48,9 +48,7 @@ const SearchModal = ({
         </Modal.Header>
         <Modal.Body>
           <div className="input-area">
-            <h4 className="input-title">
-              Use the field below to do your search
-            </h4>
+            <h4 className="input-title">Use the field below to search</h4>
             <div className="search-input-field">
               <input
                 className={`search-input ${hasError ? "error" : ""}`}

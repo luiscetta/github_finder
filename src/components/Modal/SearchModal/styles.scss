@@ -82,11 +82,11 @@
                         font-weight: bold;
                         text-transform: uppercase;
 
-                        .search-icon {
-                            margin-left: 0.35rem;
-                            font-size: 0.75rem;
-                            text-align: center;
-                        }
+                        // .search-icon {
+                        //     margin-left: 0.35rem;
+                        //     font-size: 0.75rem;
+                        //     text-align: center;
+                        // }
                     }
 
                     .search-btn:hover {
@@ -111,6 +111,46 @@
 
                     font-weight: bold;
                     margin-top: -7.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .modal {
+        .modal-content {
+            .modal-body {
+                display: grid;
+                grid-template-columns: 1fr;
+
+                .input-area {
+                    padding: 2rem;
+                    border-right: none;
+
+                    .input-title {
+                        font-size: 1.2rem;
+                        margin: 0 0 1.2rem;
+                    }
+
+                    .search-input-field {
+                        .search-input {
+                            width: 100%;
+                            height: 2.3rem;
+                            border-radius: 0.5rem;
+                            border: none;
+                            outline: 1px solid var(--purple-100);
+                            padding: 0 0.5rem;
+
+                            background-color: var(--black-900);
+                            color: var(--white-100);
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .input-animation-area {
+                    display: none;
                 }
             }
         }
