@@ -108,6 +108,28 @@
     }
 }
 
+// MEDIA__________________________________________________________________________________________
+@media screen and (width: 1366px) {
+    .search-container {
+        height: 100%;
+        // NON-EMPTY SEARCH
+        .search-result-container {
+            .search-result-layout {
+                width: 75%;
+            }
+        }
+
+        // EMPTY SEARCH
+        .search-content {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
 @media screen and (width: 1024px) and (height: 1366px) {
     .search-container {
         // NON-EMPTY SEARCH

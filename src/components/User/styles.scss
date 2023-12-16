@@ -158,6 +158,17 @@
     }
 }
 
+// MEDIA_________________________________________________________________________
+@media screen and (width: 1366px) {
+    .user-container {
+        .user-content {
+            .avatar {
+                width: 13rem;
+            }
+        }
+    }
+}
+
 @media screen and (width: 1024px) and (height: 1366px) {
     .user-container {
         .user-content {

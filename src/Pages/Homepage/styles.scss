@@ -13,60 +13,96 @@
 
     background-repeat: no-repeat;
     background-position: right, left, bottom, top, center;
-}
 
-.home-content {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    padding: 0 5rem;
+    .home-content {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 0 5rem;
 
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.4px);
-    -webkit-backdrop-filter: blur(4.4px);
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.4px);
+        -webkit-backdrop-filter: blur(4.4px);
 
-    .text-content {
-        width: 50rem;
+        .text-content {
+            width: 50rem;
 
-        .home-title {
-            color: var(--white-100);
-            font-size: 5rem;
-            line-height: 5.2rem;
+            .home-title {
+                color: var(--white-100);
+                font-size: 5rem;
+                line-height: 5.2rem;
 
-            span {
-                font-family: "Times New Roman", Times, serif;
-                font-style: italic;
-                font-weight: 500;
+                span {
+                    font-family: "Times New Roman", Times, serif;
+                    font-style: italic;
+                    font-weight: 500;
+                }
+            }
+
+            p {
+                color: var(--grey-200);
+                font-size: 1.1rem;
+
+                margin: 0.8rem 0 3rem;
+            }
+
+            .home-search-btn {
+                font-size: 1.2rem;
+                color: var(--white-100);
+                font-weight: bold;
+                text-transform: uppercase;
+
+                padding: 0.8rem;
+                background-color: var(--purple-100);
+                border: none;
+                border-radius: 0.3rem;
+            }
+
+            .home-search-btn:hover {
+                cursor: pointer;
+                background-color: #6c48b4;
+                transition: all 0.5s;
             }
         }
+    }
+}
 
-        p {
-            color: var(--grey-200);
-            font-size: 1.1rem;
+.home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-            margin: 0.8rem 0 3rem;
-        }
+    background-color: var(--black-900);
 
-        .home-search-btn {
-            font-size: 1.2rem;
-            color: var(--white-100);
-            font-weight: bold;
-            text-transform: uppercase;
+    background-image: url(../../components/assets/img/gh-cat.png), url(../../components/assets/img/gh-copilot.png),
+        url(../../components/assets/img/star1.png), url(../../components/assets/img/star2.png),
+        url(../../components/assets/img/orb.png);
 
-            padding: 0.8rem;
-            background-color: var(--purple-100);
-            border: none;
-            border-radius: 0.3rem;
-        }
+    background-repeat: no-repeat;
+    background-position: right, left, bottom, top, center;
 
-        .home-search-btn:hover {
-            cursor: pointer;
-            background-color: #6c48b4;
-            transition: all 0.5s;
+    .home-content {
+        .text-content {
+            width: 50rem;
+
+            .home-title {
+                font-size: 4rem;
+                line-height: 4.2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .home-search-btn {
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -79,18 +115,18 @@
             url(../../components/assets/img/star1.png), url(../../components/assets/img/star2.png);
 
         background-position: right, left, bottom, top;
-    }
 
-    .home-content {
-        padding: 0 2.5rem;
+        .home-content {
+            padding: 0 2.5rem;
 
-        .text-content {
-            width: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            .text-content {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
         }
     }
 }
