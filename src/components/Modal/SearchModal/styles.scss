@@ -117,6 +117,43 @@
     }
 }
 
+@media screen and (width: 1024px) and (height: 1366px) {
+    .modal {
+        .modal-content {
+            .modal-body {
+                padding: 2rem 0;
+
+                .input-area {
+                    .input-title {
+                        font-size: 1.2rem;
+                        margin: 1rem;
+                    }
+
+                    .search-input-field {
+                        .search-input {
+                            font-size: 1.15rem;
+                        }
+                    }
+                }
+
+                .input-animation-area {
+                    padding: 2rem;
+
+                    .cat-animation {
+                        margin-top: -5.8rem;
+                    }
+
+                    .subtitle-animation {
+                        font-size: 1.22rem;
+
+                        margin-top: -4.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 834px) {
     .modal {
         .modal-content {
