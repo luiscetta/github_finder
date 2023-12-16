@@ -1,8 +1,8 @@
 import axios from "axios";
 
-import { UserReposProps } from "../types/user";
+import { GithubRepo } from "../types/user";
 
-async function GetRepos(userName: string): Promise<UserReposProps> {
+async function GetRepos(userName: string): Promise<GithubRepo> {
   const res = await axios.get(`https://api.github.com/users/${userName}/repos`);
   return res.data;
 }
