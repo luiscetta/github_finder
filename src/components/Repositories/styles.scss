@@ -117,11 +117,114 @@
     }
 }
 
+@media screen and (width: 1024px) and (height: 1366px) {
+    .repos-container {
+        .repos-content {
+            .repo-card {
+                height: 7.8rem;
+
+                .repo-card-title {
+                    .repo-icon {
+                        font-size: 1rem;
+                    }
+
+                    .repo-name {
+                        font-size: 0.73rem;
+                    }
+
+                    .repo-visibility {
+                        font-size: 0.62rem;
+                    }
+                }
+
+                .repo-description {
+                    margin-top: 0.5rem;
+
+                    .description {
+                        font-size: 0.65rem;
+                    }
+                }
+
+                .repo-footer {
+                    font-size: 0.73rem;
+
+                    .lng-content {
+                        .lng {
+                            font-size: 0.73rem;
+                        }
+                    }
+
+                    .star-content {
+                        margin-right: 1.15rem;
+
+                        .star-icon {
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    .fork-content {
+                        .fork-icon {
+                            margin-right: 0.25rem;
+                            font-size: 0.78rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (width: 768px) {
     .repos-container {
         .repos-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            .repo-card {
+                .repo-card-title {
+                    .repo-name {
+                        font-size: 0.86rem;
+                    }
+
+                    .repo-visibility {
+                        font-size: 0.65rem;
+                    }
+                }
+
+                .repo-description {
+                    margin-top: 0.7rem;
+
+                    .description {
+                        font-size: 0.67rem;
+                    }
+                }
+
+                .repo-footer {
+                    font-size: 0.73rem;
+
+                    .lng-content {
+                        .lng {
+                            font-size: 0.75rem;
+                            margin-right: 1.1rem;
+                        }
+                    }
+
+                    .star-content {
+                        margin-right: 1.1rem;
+
+                        .star-icon {
+                            margin-right: 0.28rem;
+
+                            font-size: 0.85rem;
+                        }
+                    }
+
+                    .fork-content {
+                        .fork-icon {
+                            margin-right: 0.28rem;
+
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -131,111 +234,61 @@
         height: 100%;
 
         .repo-title-content {
-            padding: 0 1.5rem;
-
             .repo-title {
-                color: var(--grey-300);
-                font-size: 1.1rem;
+                font-size: 1rem;
+                font-weight: bold;
             }
         }
 
         .repos-content {
-            display: grid;
             grid-template-columns: 1fr;
-            gap: 1.5rem;
-            padding: 0 1.5rem 1rem;
+            margin-bottom: 3rem;
 
             .repo-card {
-                display: flex;
-                flex-direction: column;
                 height: 7.5rem;
 
-                color: var(--grey-400);
-
                 .repo-card-title {
-                    display: flex;
-                    align-items: center;
-
                     .repo-icon {
-                        margin-right: 0.4rem;
-
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                     }
 
                     .repo-name {
-                        width: auto;
-
-                        color: var(--anchor);
-                        font-weight: bold;
-                        font-size: 0.875rem;
-                    }
-
-                    .repo-name:hover {
-                        text-decoration: underline;
+                        font-size: 0.8rem;
                     }
 
                     .repo-visibility {
-                        display: flex;
-                        align-items: center;
-                        font-size: 0.7rem;
-                        text-transform: capitalize;
-
-                        margin-left: 0.55rem;
-                        border: 1px solid var(--grey-600);
-                        border-radius: 0.6rem;
-                        padding: 0 0.4rem;
+                        font-size: 0.65rem;
                     }
                 }
 
                 .repo-description {
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-
-                    margin-top: 0.9rem;
+                    margin-top: 0.8rem;
 
                     .description {
-                        font-size: 0.8rem;
+                        font-size: 0.73rem;
                     }
                 }
 
                 .repo-footer {
-                    display: flex;
-                    align-items: center;
-                    margin-top: 0.9rem;
-
-                    font-size: 0.75rem;
+                    font-size: 0.72rem;
 
                     .lng-content {
-                        display: inherit;
-                        align-items: inherit;
-
                         .lng {
                             font-size: 0.8rem;
-                            margin-right: 1.2rem;
                         }
                     }
 
                     .star-content {
-                        display: inherit;
-                        align-items: inherit;
                         margin-right: 1.2rem;
 
                         .star-icon {
-                            margin-right: 0.28rem;
-
-                            font-size: 0.95rem;
+                            font-size: 0.83rem;
                         }
                     }
 
                     .fork-content {
-                        display: inherit;
-                        align-items: inherit;
-
                         .fork-icon {
-                            margin-right: 0.28rem;
-
-                            font-size: 0.86rem;
+                            font-size: 0.82rem;
                         }
                     }
                 }

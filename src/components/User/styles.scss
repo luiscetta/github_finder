@@ -158,146 +158,158 @@
     }
 }
 
-// @media screen and (max-width: 834px) {
-//     .user-container {
-//         height: auto;
-//         display: grid;
-//         grid-template-columns: 1fr;
+@media screen and (width: 1024px) and (height: 1366px) {
+    .user-container {
+        .user-content {
+            .avatar {
+                width: 13rem;
+            }
 
-//         .user-content {
-//             width: 100%;
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             justify-content: center;
+            .text-content {
+                width: 100%;
+                margin: 1.3rem 0 1rem;
 
-//             .avatar {
-//                 width: 10rem;
-//             }
+                .login {
+                    color: var(--grey-400);
+                    font-size: 1.25rem;
+                }
 
-//             .text-content {
-//                 width: 100%;
-//                 text-align: center;
+                .name {
+                    font-size: 1.5rem;
+                    font-weight: bold;
 
-//                 .login {
-//                     color: var(--grey-400);
-//                     font-size: 1.25rem;
-//                 }
+                    margin: 0;
+                }
+            }
 
-//                 .name {
-//                     font-size: 1.5rem;
-//                     font-weight: bold;
+            .profile-btn-content {
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                margin: 1rem 0;
 
-//                     margin: 0;
-//                 }
-//             }
+                .profile-btn {
+                    width: 100%;
+                    padding: 0.3rem 0;
+                    border-radius: 0.4rem;
+                    border: 1px solid #494f55;
 
-//             .profile-btn-content {
-//                 width: 50%;
-//                 align-items: center;
-//                 justify-content: center;
-//                 display: flex;
-//                 margin: 0.5rem 0;
+                    text-align: center;
+                    font-size: 0.875rem;
+                    background-color: var(--black-700);
+                }
 
-//                 .profile-btn {
-//                     width: 100%;
-//                     padding: 0.3rem 0;
-//                     border-radius: 0.4rem;
-//                     border: 1px solid #494f55;
+                .profile-btn:hover {
+                    background-color: #48525e;
+                    border: 1px solid var(--grey-400);
+                }
+            }
 
-//                     text-align: center;
-//                     font-size: 0.875rem;
-//                     background-color: var(--black-700);
-//                 }
+            .bio {
+                font-size: 0.9rem;
+                text-align: left;
+            }
 
-//                 .profile-btn:hover {
-//                     background-color: #48525e;
-//                     border: 1px solid var(--grey-400);
-//                 }
-//             }
+            .follow-content {
+                width: 14rem;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 1.2rem 0;
 
-//             .bio {
-//                 text-align: center;
-//             }
+                font-size: 0.875rem;
 
-//             .follow-content {
-//                 width: 13.5rem;
+                .person-icon {
+                    font-size: 0.9rem;
+                }
 
-//                 text-align: left;
-//             }
+                .dot {
+                    font-size: 0.35rem;
+                }
 
-//             .address-content {
-//                 width: 100%;
-//                 text-align: left;
+                .follow,
+                .person-icon {
+                    color: var(--grey-400);
+                }
 
-//                 .company-content {
-//                     .company {
-//                         margin: 0;
-//                     }
-//                 }
+                .follow-number {
+                    font-weight: bold;
+                }
+            }
 
-//                 .location-content {
-//                     .location {
-//                         font-size: 0.875rem;
-//                     }
-//                 }
+            .address-content {
+                font-size: 0.875rem;
 
-//                 .blog-content {
-//                     .blog:hover {
-//                         text-decoration: underline;
-//                         color: var(--anchor);
-//                     }
-//                 }
+                .company-content {
+                    .company {
+                        margin: 0;
+                    }
+                }
 
-//                 .twitter-content {
-//                     .twitter {
-//                         margin: 0;
-//                     }
+                .location-content {
+                    .location {
+                        font-size: 0.875rem;
+                    }
+                }
 
-//                     .twitter:hover {
-//                         text-decoration: underline;
-//                         color: var(--anchor);
-//                     }
-//                 }
+                .blog-content {
+                    .blog:hover {
+                        text-decoration: underline;
+                        color: var(--anchor);
+                    }
+                }
 
-//                 .company-content,
-//                 .location-content,
-//                 .twitter-content,
-//                 .blog-content {
-//                     display: flex;
-//                     align-items: center;
-//                     margin-bottom: 0.3rem;
-//                 }
+                .twitter-content {
+                    .twitter {
+                        margin: 0;
+                    }
 
-//                 .company-icon,
-//                 .location-icon,
-//                 .twitter-icon,
-//                 .blog-icon {
-//                     font-size: 1rem;
-//                     margin-right: 0.4rem;
-//                     color: var(--grey-400);
-//                 }
-//             }
+                    .twitter:hover {
+                        text-decoration: underline;
+                        color: var(--anchor);
+                    }
+                }
 
-//             .avatar,
-//             .bio,
-//             .blog,
-//             .location,
-//             .name,
-//             .follow-number,
-//             .dot,
-//             .location-icon,
-//             .profile-btn,
-//             .company,
-//             .twitter,
-//             .company-icon,
-//             .twitter-icon,
-//             .blog-icon {
-//                 color: var(--grey-300);
-//             }
-//         }
-//     }
-// }
+                .company-content,
+                .location-content,
+                .twitter-content,
+                .blog-content {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0.3rem;
+                }
+
+                .company-icon,
+                .location-icon,
+                .twitter-icon,
+                .blog-icon {
+                    font-size: 1rem;
+                    margin-right: 0.4rem;
+                    color: var(--grey-400);
+                }
+            }
+
+            .avatar,
+            .bio,
+            .blog,
+            .location,
+            .name,
+            .follow-number,
+            .dot,
+            .location-icon,
+            .profile-btn,
+            .company,
+            .twitter,
+            .company-icon,
+            .twitter-icon,
+            .blog-icon {
+                color: var(--grey-300);
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 834px) {
     .user-container {
@@ -359,12 +371,12 @@
 
             .bio {
                 text-align: center;
-                margin: 1rem 0 .5rem;
+                margin: 1rem 0 0.5rem;
             }
 
             .follow-content {
                 width: 13.5rem;
-                margin: .7rem 0;
+                margin: 0.7rem 0;
 
                 text-align: center;
             }

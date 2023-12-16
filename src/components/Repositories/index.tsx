@@ -27,7 +27,9 @@ const Repositories = ({ data }: ReposComponentProps) => {
                 <div className="repo-card-title">
                   <RiGitRepositoryLine className="repo-icon" />
                   <a className="repo-name" href={repo.html_url} target="_blank">
-                    {repo.name}
+                    {repo.name && (
+                      <TruncateText text={repo.name} maxLength={40} />
+                    )}
                   </a>
                   <span className="repo-visibility">{repo.visibility}</span>
                 </div>
@@ -36,7 +38,7 @@ const Repositories = ({ data }: ReposComponentProps) => {
                     <TruncateText
                       className="description"
                       text={repo.description}
-                      maxLength={45}
+                      maxLength={40}
                     />
                   )}
                 </div>

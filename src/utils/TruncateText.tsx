@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 type TruncateTextProps = {
   text: string;
   maxLength: number;
-  className: string;
+  className?: string;
 };
 
 const TruncateText = ({ text, maxLength, className }: TruncateTextProps) => {
